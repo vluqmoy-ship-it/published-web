@@ -1453,16 +1453,20 @@
 <script>
   document.getElementById('contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target);
-    
+    formData.set('origen', window.location.href);
+    formData.set('pagina_titulo', document.title);
+
     try {
-      await fetch('https://formspree.io/f/xkoyrknw', {
+      const res = await fetch('https://formspree.io/f/xkoyrknw', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
-      
+
+      if (!res.ok) throw new Error('Respuesta ' + res.status);
+
       document.getElementById('contact-form').style.display = 'none';
       document.getElementById('confirmation').style.display = 'block';
     } catch (error) {
