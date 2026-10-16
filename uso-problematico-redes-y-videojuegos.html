@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========== SEO ========== -->
+  <title>Terapia online para el uso problemático de redes sociales y videojuegos · SerElpis</title>
+  <meta name="description" content="¿Sientes que las pantallas deciden por ti? Sesiones individuales online (40–45 min, 40 €) para el uso problemático de redes sociales y videojuegos, desde un enfoque contextual adaptado a ti.">
+  <!-- CAMBIA la URL canónica por la dirección final de esta página -->
+  <link rel="canonical" href="https://www.serelpis.com/redes-y-videojuegos">
+  <meta name="author" content="Vanessa Luque">
+  <!-- Si esta página es solo para anuncios y no quieres que compita con tu web en Google, descomenta: -->
+  <!-- <meta name="robots" content="noindex, follow"> -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="¿Sientes que las pantallas deciden por ti? · SerElpis">
+  <meta property="og:description" content="Terapia online para el uso problemático de redes sociales y videojuegos. Sesiones individuales adaptadas a ti.">
+  <meta property="og:url" content="https://www.serelpis.com/redes-y-videojuegos">
+  <meta name="twitter:card" content="summary">
+
+  <!-- ========== GOOGLE ADS / ANALYTICS ==========
+       Pega aquí tu etiqueta de Google (gtag.js) cuando la tengas, por ejemplo:
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+  ========================================== -->
+
+  <!-- ========== FUENTES ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ========== DATOS ESTRUCTURADOS ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sesiones online para el uso problemático de redes sociales y videojuegos",
+    "provider": { "@type": "Person", "name": "Vanessa Luque", "url": "https://www.serelpis.com" },
+    "areaServed": "ES",
+    "serviceType": "Acompañamiento y entrenamiento en habilidades emocionales (enfoque contextual)",
+    "offers": { "@type": "Offer", "price": "40", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <!-- ==========================================================
+       ESTILOS
+       Colores y fuentes: edita solo las variables de :root
+       ========================================================== -->
+  <style>
+    :root {
+      /* Paleta */
+      --plum: #6B3E5E;
+      --plum-deep: #4A2A40;
+      --plum-soft: #8F5A7A;
+      --rosa: #E8AABB;
+      --rosa-pale: #F5D9E2;
+      --rosa-blush: #FDF0F4;
+      --cream: #FBF7F4;
+      --text-dark: #0E0709;
+      --text-mid: #271626;
+      --text-light: #3E2438;
+
+      /* Fuentes: Cormorant para títulos (tu marca), Nunito Sans para leer cómodo.
+         Si quieres Cormorant en todo, pon --font-body: var(--font); */
+      --font: 'Cormorant Garamond', serif;
+      --font-body: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --radius: 20px;
+      --maxw: 1120px;
+      --shadow: 0 12px 32px rgba(74, 42, 64, .12);
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--text-mid);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 {
+      font-family: var(--font);
+      color: var(--text-dark);
+      font-weight: 700;
+      line-height: 1.08;
+      margin: 0 0 1rem;
+    }
+    h1 { font-size: clamp(2.7rem, 7vw, 4.5rem); }
+    h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
+    h3 { font-size: 1.55rem; line-height: 1.2; }
+    em { font-style: italic; color: var(--plum); }
+    p { margin: 0 0 1.1rem; }
+    a { color: var(--plum); }
+    img { max-width: 100%; height: auto; }
+
+    .container { width: min(100% - 2.5rem, var(--maxw)); margin-inline: auto; }
+    .center { text-align: center; }
+    .skip { position: absolute; left: -999px; top: 0; background: var(--plum); color: #fff; padding: .6rem 1rem; z-index: 100; }
+    .skip:focus { left: 0; }
+    :focus-visible { outline: 3px solid var(--rosa); outline-offset: 3px; }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 54px; padding: .9rem 1.9rem;
+      border-radius: 999px; border: 0; cursor: pointer;
+      font-family: var(--font-body); font-size: 1.05rem; font-weight: 800;
+      text-decoration: none; text-align: center;
+      transition: transform .15s, background .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:disabled { opacity: .7; cursor: wait; transform: none; }
+    .btn--primary { background: var(--plum); color: #fff; box-shadow: 0 8px 20px rgba(107, 62, 94, .35); }
+    .btn--primary:hover { background: var(--plum-deep); }
+    .btn--accent { background: var(--rosa); color: var(--plum-deep); box-shadow: 0 8px 22px rgba(0, 0, 0, .25); }
+    .btn--accent:hover { background: var(--rosa-pale); }
+    .btn--small { min-height: 42px; padding: .5rem 1.2rem; font-size: .95rem; }
+    .btn--block { width: 100%; }
+
+    /* ---------- Cabecera (sin menú: una sola acción) ---------- */
+    .header { position: sticky; top: 0; z-index: 50; background: var(--plum-deep); }
+    .header__inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
+    .logo { font-family: var(--font); font-size: 2rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: .02em; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background: linear-gradient(160deg, var(--plum-deep) 0%, var(--plum) 100%);
+      color: var(--rosa-blush);
+      padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 5.5rem);
+    }
+    .hero__grid { display: grid; gap: 2.4rem; grid-template-columns: 1fr; }
+    @media (min-width: 920px) {
+      .hero__grid { grid-template-columns: 1.1fr .9fr; gap: 3.5rem; align-items: center; }
+      .hero__cta-mobile { display: none; }
+    }
+    .eyebrow {
+      display: inline-block; text-transform: uppercase; letter-spacing: .14em;
+      font-size: .8rem; font-weight: 800; color: var(--rosa); margin-bottom: 1rem;
+    }
+    .hero h1 { color: #fff; }
+    .hero h1 em { color: var(--rosa); }
+    .hero__lead { font-size: 1.25rem; color: var(--rosa-pale); max-width: 34rem; }
+    .checks { list-style: none; padding: 0; margin: 1.4rem 0 1.8rem; display: grid; gap: .6rem; }
+    .checks li { position: relative; padding-left: 2rem; font-weight: 600; }
+    .checks li::before {
+      content: "✓"; position: absolute; left: 0; top: .1rem;
+      width: 1.4rem; height: 1.4rem; border-radius: 50%;
+      background: var(--rosa); color: var(--plum-deep);
+      font-size: .85rem; font-weight: 800; display: grid; place-items: center; line-height: 1;
+    }
+
+    /* ---------- Formulario ---------- */
+    .form-card {
+      background: var(--cream); color: var(--text-mid);
+      border-radius: 24px; padding: 1.7rem;
+      box-shadow: 0 24px 60px rgba(14, 7, 9, .35);
+    }
+    .form-card h2 { font-size: 2rem; color: var(--plum-deep); margin-bottom: .4rem; }
+    .form-card__sub { font-size: 1rem; color: var(--text-light); margin-bottom: 1.2rem; }
+    .lead-form label { display: block; font-size: .95rem; font-weight: 700; color: var(--text-dark); margin-bottom: .9rem; }
+    .lead-form .opt { font-weight: 400; color: var(--text-light); }
+    .lead-form input[type="text"],
+    .lead-form input[type="email"],
+    .lead-form textarea {
+      display: block; width: 100%; margin-top: .3rem;
+      padding: .85rem 1rem; border: 2px solid var(--rosa-pale); border-radius: 12px;
+      background: #fff; color: var(--text-dark);
+      font-family: var(--font-body); font-size: 1rem;   /* 16px: evita zoom en iPhone */
+    }
+    .lead-form textarea { resize: vertical; min-height: 84px; }
+    .lead-form input:focus, .lead-form textarea:focus { border-color: var(--plum); outline: none; }
+    .lead-form .check { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; font-size: .88rem; color: var(--text-light); }
+    .lead-form .check input { margin-top: .25rem; width: 18px; height: 18px; flex: none; accent-color: var(--plum); }
+    .hp { position: absolute; left: -9999px; }
+    .form-micro { font-size: .88rem; text-align: center; color: var(--text-light); margin: .9rem 0 0; }
+    .form-status { margin: .8rem 0 0; font-weight: 700; text-align: center; }
+    .form-status:empty { display: none; }
+    .form-status.is-ok { color: #1f6b3a; }
+    .form-status.is-error { color: #a12a2a; }
+
+    /* ---------- Franja de confianza ---------- */
+    .trust { background: #fff; border-bottom: 1px solid var(--rosa-pale); }
+    .trust__list {
+      list-style: none; margin: 0; padding: 1.2rem 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: .9rem 1.2rem;
+    }
+    @media (min-width: 820px) { .trust__list { grid-template-columns: repeat(4, 1fr); } }
+    .trust__list li { font-weight: 700; font-size: .98rem; color: var(--plum-deep); display: flex; gap: .6rem; align-items: center; line-height: 1.3; }
+    .trust__list li::before {
+      content: "✓"; flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+      background: var(--rosa-pale); color: var(--plum); font-weight: 800; font-size: .85rem;
+      display: grid; place-items: center;
+    }
+
+    /* ---------- Secciones ---------- */
+    .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+    .section--blush { background: var(--rosa-blush); }
+    .section--rosa { background: var(--rosa-pale); }
+    .section--dark { background: var(--plum-deep); color: var(--rosa-blush); }
+    .section--dark h2 { color: #fff; }
+    .section--dark em { color: var(--rosa); }
+    .section__head { max-width: 46rem; margin-bottom: 2.4rem; }
+    .section__head.center { margin-inline: auto; }
+    .section__head p { font-size: 1.2rem; color: var(--text-light); }
+    .section--dark .section__head p { color: var(--rosa-pale); }
+
+    /* ---------- ¿Te suena? ---------- */
+    .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+    .quote {
+      background: #fff; border-radius: var(--radius); padding: 1.5rem 1.4rem 1.4rem;
+      box-shadow: var(--shadow); border-top: 5px solid var(--rosa);
+      font-family: var(--font); font-size: 1.45rem; line-height: 1.25; font-weight: 600; color: var(--plum-deep);
+    }
+    .reassure {
+      margin: 2.2rem auto 0; max-width: 44rem; text-align: center;
+      font-size: 1.2rem; color: var(--text-dark);
+    }
+    .reassure strong { color: var(--plum); }
+    .cta-row { text-align: center; margin-top: 1.6rem; }
+
+    /* ---------- Enfoque ---------- */
+    .split { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; }
+    @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .principles { display: grid; gap: 1rem; }
+    .principle { background: #fff; border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow); }
+    .principle h3 { color: var(--plum); margin-bottom: .3rem; font-size: 1.45rem; }
+    .principle p { margin: 0; }
+
+    /* ---------- Precio ---------- */
+    .price {
+      max-width: 40rem; margin-inline: auto; background: #fff;
+      border-radius: 28px; padding: 2.2rem 1.8rem; box-shadow: var(--shadow);
+      border: 2px solid var(--rosa); text-align: center;
+    }
+    .price__amount { font-family: var(--font); font-size: 5rem; font-weight: 700; color: var(--plum); line-height: 1; }
+    .price__unit { display: block; font-weight: 700; color: var(--text-light); margin: .3rem 0 1.4rem; }
+    .price .checks { text-align: left; max-width: 28rem; margin: 0 auto 1.8rem; }
+    .price .checks li::before { background: var(--rosa-pale); color: var(--plum); }
+
+    /* ---------- Sobre mí ---------- */
+    .about { display: grid; grid-template-columns: 1fr; gap: 2.2rem; align-items: start; }
+    .about__media { position: relative; width: min(100%, 280px); margin-inline: auto; }
+    .about__media::before {            /* marco rosa decorativo detrás de la foto */
+      content: ""; position: absolute; inset: 14px -14px -14px 14px;
+      background: var(--rosa-pale); border-radius: var(--radius); z-index: 0;
+    }
+    .about__photo {
+      position: relative; z-index: 1; display: block;
+      width: 100%; height: auto; aspect-ratio: 4 / 5;
+      object-fit: cover; object-position: center top;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .about__body h2 { margin-bottom: 1.2rem; }
+    .about__lead { font-family: var(--font); font-size: 1.6rem; line-height: 1.3; font-weight: 600; color: var(--plum-deep); margin-bottom: 1.2rem; }
+    .about__personal {
+      background: var(--rosa-blush); border-left: 4px solid var(--rosa);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.3rem 1.5rem .4rem; margin: 1.6rem 0;
+    }
+    .about__personal h3 { font-size: 1.35rem; color: var(--plum); margin-bottom: .7rem; }
+    .about .cta-row { text-align: left; margin-top: 1.8rem; }
+    @media (min-width: 900px) {
+      .about { grid-template-columns: 340px 1fr; gap: 4.5rem; }
+      .about__media { width: 100%; margin: 0; position: sticky; top: 100px; }
+    }
+    @media (max-width: 899px) { .about .cta-row { text-align: center; } }
+
+    /* ---------- Formación ---------- */
+    .training {
+      margin-top: 2rem; background: #fff;
+      border: 1px solid var(--rosa-pale); border-radius: var(--radius);
+      padding: 1.5rem 1.6rem; box-shadow: var(--shadow);
+    }
+    .training h3 { color: var(--plum); margin-bottom: 1rem; }
+    .training__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem 1.5rem; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .training__list { grid-template-columns: 1fr 1fr; } }
+    .training__list li { position: relative; padding-left: 1.9rem; font-weight: 600; }
+    .training__list li::before {
+      content: "✓"; position: absolute; left: 0; top: .2rem;
+      width: 1.3rem; height: 1.3rem; border-radius: 50%;
+      background: var(--rosa-pale); color: var(--plum);
+      font-size: .8rem; font-weight: 800; line-height: 1;
+      display: grid; place-items: center;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq { max-width: 46rem; margin-inline: auto; display: grid; gap: .8rem; }
+    .faq details { background: #fff; border: 1px solid var(--rosa-pale); border-radius: 16px; padding: 0 1.3rem; }
+    .faq summary {
+      list-style: none; cursor: pointer; position: relative;
+      padding: 1.1rem 2.2rem 1.1rem 0; font-weight: 800; color: var(--text-dark);
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.7rem; color: var(--plum); font-weight: 600; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { padding-bottom: .5rem; }
+
+    /* ---------- CTA final ---------- */
+    .final { max-width: 40rem; margin-inline: auto; }
+    .final .form-card { margin-top: 2rem; text-align: left; }
+
+    /* ---------- Pie ---------- */
+    .footer { background: var(--text-dark); color: var(--rosa-pale); padding: 2.4rem 0; font-size: .92rem; }
+    .footer a { color: var(--rosa-pale); }
+    .footer__top { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+    .footer .logo { font-size: 1.7rem; }
+    .footer__legal { max-width: 52rem; margin: 0 0 .6rem; opacity: .9; }
+
+    /* ---------- Botón fijo en móvil ---------- */
+    .sticky-cta {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+      background: rgba(74, 42, 64, .96); backdrop-filter: blur(6px);
+      transform: translateY(110%); transition: transform .25s;
+    }
+    .sticky-cta.is-visible { transform: translateY(0); }
+    .sticky-cta .btn { width: 100%; }
+    @media (min-width: 920px) { .sticky-cta { display: none; } }
+    @media (max-width: 919px) { .footer { padding-bottom: 6rem; } }
+
+    @media (max-width: 520px) { .price__amount { font-size: 4.2rem; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ========== CABECERA ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="https://www.serelpis.com">SerElpis</a>
+      <a class="btn btn--accent btn--small" href="#formulario">Cuéntame qué necesitas</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ========== HERO + FORMULARIO ========== -->
+    <section class="hero">
+      <div class="container hero__grid">
+
+        <div>
+          <span class="eyebrow">Terapia online · Redes sociales y videojuegos</span>
+          <h1>¿Sientes que las pantallas <em>deciden por ti</em>?</h1>
+          <p class="hero__lead">
+            Terapia online para cuando el móvil, las redes o los videojuegos se han quedado
+            con más tiempo, sueño y energía de los que quieres darles. Lo construimos a tu ritmo y a tu medida.
+          </p>
+
+          <ul class="checks">
+            <li>Sesiones online de 40–45 minutos</li>
+            <li>40 € por sesión</li>
+            <li>Enfoque contextual, adaptado a ti: con base científica pero sin protocolos rígidos</li>
+            <li>Tú decides cuándo empezar y cuándo terminar</li>
+          </ul>
+
+          <a class="btn btn--accent hero__cta-mobile" href="#formulario">Cuéntame qué necesitas →</a>
+        </div>
+
+        <!-- Formulario principal -->
+        <div class="form-card" id="formulario">
+          <h2>Solicita más información</h2>
+          <p class="form-card__sub">Tanto si quieres agendar una cita como si necesitas resolver alguna duda sobre mi forma de trabajar, no dudes en contactarme y me pondré en contacto contigo en la mayor brevedad posible.</p>
+
+          <form class="lead-form" method="POST" action="https://formspree.io/f/TU_ID">
+            <label>Tu nombre
+              <input type="text" name="nombre" autocomplete="given-name" required>
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Tu mensaje <span class="opt">(opcional)</span>
+              <textarea name="mensaje" rows="3"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consentimiento" required>
+              <span>He leído y acepto la <a href="https://www.serelpis.com/privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn--primary btn--block" type="submit">Enviar →</button>
+            <p class="form-micro"></p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== FRANJA DE CONFIANZA ========== -->
+    <div class="trust">
+      <div class="container">
+        <ul class="trust__list">
+          <li>Enfoque contextual basado en evidencia</li>
+          <li>Sesiones online de 40–45 min</li>
+          <li>Confidencial, conforme al RGPD</li>
+          <li>Respuesta en menos de 48 h</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========== ¿TE SUENA? ========== -->
+    <section class="section section--blush">
+      <div class="container">
+        <div class="section__head center">
+          <h2>¿Te suena alguna de <em>estas frases</em>?</h2>
+        </div>
+
+        <div class="cards">
+          <div class="quote">"Solo iba a mirar un momento y se me han ido dos horas."</div>
+          <div class="quote">"Me enfado conmigo por no poder parar, aunque sé que me hace daño."</div>
+          <div class="quote">"Cuando me aburro o me siento mal, cojo el móvil sin darme cuenta."</div>
+          <div class="quote">"Estoy con gente, pero mi cabeza y mi mano están en la pantalla."</div>
+          <div class="quote">"Duermo menos de lo que necesito por una partida más o un vídeo más."</div>
+          <div class="quote">"Me comparo con lo que veo y termino sintiéndome peor."</div>
+        </div>
+
+        <p class="reassure">
+          Si te reconoces, <strong>no eres débil ni lo estás haciendo mal</strong>.
+          Las pantallas suelen cumplir una función: distraer, conectar, descansar, escapar un rato.
+          El problema aparece cuando nos quitan la vida que queremos tener.
+        </p>
+        <div class="cta-row"><a class="btn btn--primary" href="#formulario">Quiero hablar contigo →</a></div>
+      </div>
+    </section>
+
+    <!-- ========== ENFOQUE ========== -->
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>No se trata de <em>"dejarlo todo"</em></h2>
+          <p>
+            Aguantar a base de fuerza de voluntad suele funcionar poco tiempo y deja
+            una sensación de fracaso. Por eso aquí no te voy a pedir que borres todo
+            ni que te desconectes del mundo.
+          </p>
+          <p>
+            Trabajamos otra cosa: <strong>qué buscas en la pantalla</strong> y qué emociones hay detrás,
+            para que puedas elegir con más libertad, el uso que haces de ella no decida por ti
+            y tengas más espacio para lo que de verdad te importa.
+          </p>
+          <p>
+            Trabajo desde un enfoque contextual: miro qué hay detrás de tu
+            malestar, cuándo aparece y qué te está costando. Dos personas
+            pueden usar el móvil igual y necesitar procesos muy distintos.
+          </p>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <h3>Rigor sin rigidez</h3>
+            <p>Uso estrategias con respaldo científico, pero las adapto a ti, no al revés.</p>
+          </div>
+          <div class="principle">
+            <h3>Sin juicio, con dirección</h3>
+            <p>No hay hábitos ni emociones incorrectas. Hay formas de relacionarnos con ellos que abren posibilidades y otras que las cierran.</p>
+          </div>
+          <div class="principle">
+            <h3>Tú en el centro</h3>
+            <p>Las sesiones no siguen un guion fijo: parten de lo que traes y de hacia dónde quieres ir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRECIO ========== -->
+    <section class="section section--rosa">
+      <div class="container">
+        <div class="section__head center">
+          <h2>Un espacio para ti, <em>a tu ritmo</em></h2>
+        </div>
+
+        <div class="price">
+          <div class="price__amount">40 €</div>
+          <span class="price__unit">por sesión individual</span>
+          <ul class="checks">
+            <li>Videollamada de 40–45 minutos</li>
+            <li>Desde donde estés, sin desplazamientos</li>
+            <li>Sin guion fijo: cada sesión parte de lo que traes</li>
+            <li>No hay un número de sesiones establecido</li>
+            <li>Confidencial, conforme al RGPD</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="#formulario">Quiero empezar →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="section">
+      <div class="container about">
+
+        <div class="about__media">
+          <!-- SUBE tu foto al repositorio con este nombre junto a index.html -->
+          <img class="about__photo" src="vanessaperro.jpg"
+               alt="Vanessa Luque, terapeuta contextual"
+               width="400" height="500" loading="lazy">
+        </div>
+
+        <div class="about__body">
+          <h2>Hola, soy <em>Vanessa</em></h2>
+
+          <p class="about__lead">
+            Soy terapeuta contextual y educadora social especializada en educación emocional.
+          </p>
+
+          <p>
+            Durante años he trabajado y hecho voluntariados con personas en situaciones muy
+            distintas: salud mental, adicciones, personas mayores, infancia… Eso me enseñó que
+            cada persona es diferente y que no hay una única forma de acompañar ni de vivir la vida.
+          </p>
+          <p>
+            Por eso no trabajo con recetas: me interesa entender qué hay detrás de lo que sientes
+            y qué te ha llevado al lugar donde estás hoy, para poder construir contigo algo que
+            tenga sentido para tu vida y el tipo de persona que quieres ser.
+          </p>
+
+          <div class="about__personal">
+            <h3>Y fuera de la consulta…</h3>
+            <p>
+              Sé que dar el primer paso puede costar, y más con alguien a quien no conoces de nada,
+              así que para que sepas un poquito más sobre mí: soy una persona con mucha curiosidad
+              y muchas aficiones. Me gusta leer, ver series, pasear por la naturaleza, los animales
+              (tengo una gatita y una perrita), los juegos de mesa y los videojuegos, mirar las
+              estrellas y planetas con mi telescopio y aprender cosas nuevas, especialmente para
+              poder comprender y ayudar a otras personas.
+            </p>
+            <p>
+              Y sobre el tipo de persona que intento ser, mi norte lo marcan la amabilidad y la
+              humildad (aunque por supuestísimo no soy perfecta y a veces meto la pata y voy en la
+              dirección contraria, hasta que mi brújula me recuerda cuál era el norte). Pienso que
+              la vida es eso: decidir hacia dónde quieres moverte y qué tipo de persona te gustaría
+              ser en ese viaje, y cuando la vida te pone obstáculos o te pierdes, usar esa brújula
+              para volver a tu camino.
+            </p>
+          </div>
+
+          <div class="training">
+            <h3>Tengo formación en</h3>
+            <ul class="training__list">
+              <li>Terapias contextuales y de tercera generación</li>
+              <li>Terapia de Aceptación y Compromiso</li>
+              <li>Terapia Analítico Funcional</li>
+              <li>Educación social</li>
+              <li>Educación emocional</li>
+              <li>Análisis de conducta</li>
+            </ul>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#formulario">Quiero hablar contigo →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section section--blush">
+      <div class="container">
+        <div class="section__head center">
+          <h2>Lo que quizá te estás <em>preguntando</em></h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Cómo sé si es para mí?</summary>
+            <p>
+              Puede serlo si sientes que el móvil, las redes o los videojuegos ocupan más espacio
+              del que quieres, te cuesta parar y notas que afectan a tu sueño, a tu ánimo o a tus
+              relaciones. No hace falta saber qué te pasa ni tener las palabras exactas. Con que
+              quieras relacionarte de otra manera con las pantallas, ya es suficiente para empezar.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Tendré que dejar las redes o los videojuegos?</summary>
+            <p>
+              No. No te voy a pedir que renuncies a algo que disfrutas. Trabajamos para que decidas
+              tú cómo, cuándo y cuánto, y para que el uso que haces de ellos sume a tu vida en lugar
+              de restar.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cómo funcionan las sesiones?</summary>
+            <p>
+              Son por videollamada y duran entre 40 y 45 minutos. No hay guion
+              fijo. En la primera sesión exploramos qué te trae y empezamos a
+              trabajar. Las siguientes parten de lo que traes, de lo que practicas
+              entre sesiones y de hacia dónde quieres ir.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cuántas sesiones necesitaré?</summary>
+            <p>
+              No hay un número fijo. Depende de ti y de lo que necesites.
+              En la primera sesión valoramos qué ritmo tiene sentido y
+              lo vamos revisando por el camino.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Es confidencial?</summary>
+            <p>
+              Sí. Todo lo que compartes está protegido conforme al RGPD y no
+              comparto tus datos con nadie.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ========== PIE ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="logo" href="https://www.serelpis.com">SerElpis</a>
+        <span>
+          <a href="https://www.serelpis.com">Web</a> ·
+          <a href="https://www.serelpis.com/privacidad">Política de privacidad</a>
+        </span>
+      </div>
+      <p class="footer__legal">
+        SerElpis ofrece terapia online, acompañamiento y entrenamiento en habilidades emocionales.
+        No es un servicio de urgencias ni sustituye a la atención sanitaria.
+        Si estás en una situación de crisis, llama al 112. Si tienes pensamientos
+        de hacerte daño, puedes llamar al 024.
+      </p>
+      <p>© <span id="year">2026</span> SerElpis</p>
+    </div>
+  </footer>
+
+  <!-- Botón fijo en móvil -->
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn--accent" href="#formulario">Cuéntame qué necesitas →</a>
+  </div>
+
+  <!-- ==========================================================
+       JAVASCRIPT
+       Configura aquí tu formulario y tu conversión de Google Ads
+       ========================================================== -->
+  <script>
+    const CONFIG = {
+      // 1) Tu endpoint de Formspree (https://formspree.io/f/xxxxxxx)
+      FORM_ENDPOINT: 'https://formspree.io/f/TU_ID',
+      // 2) Tu conversión de Google Ads, con el formato 'AW-XXXXXXXXX/YYYYYYYYYYYY'
+      //    (déjalo vacío hasta que la tengas)
+      ADS_CONVERSION: ''
+    };
+
+    (function () {
+      const forms = document.querySelectorAll('.lead-form');
+
+      // ----- Envío del formulario -----
+      forms.forEach((form) => {
+        form.action = CONFIG.FORM_ENDPOINT;
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const status = form.querySelector('.form-status');
+          const btn = form.querySelector('button[type="submit"]');
+          const setStatus = (msg, cls) => { status.textContent = msg; status.className = 'form-status ' + cls; };
+
+          if (CONFIG.FORM_ENDPOINT.includes('TU_ID')) {
+            setStatus('Falta configurar el formulario (FORM_ENDPOINT en el script).', 'is-error');
+            return;
+          }
+
+          const label = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = 'Enviando…';
+
+          try {
+            const res = await fetch(CONFIG.FORM_ENDPOINT, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { Accept: 'application/json' }
+            });
+            if (!res.ok) throw new Error('Error de envío');
+
+            form.reset();
+            setStatus('¡Gracias por escribirme! Te responderé en breve :)', 'is-ok');
+
+            // Medición de conversión (solo si has pegado la etiqueta de Google arriba)
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead');
+              if (CONFIG.ADS_CONVERSION) gtag('event', 'conversion', { send_to: CONFIG.ADS_CONVERSION });
+            }
+          } catch (err) {
+            setStatus('No se ha podido enviar. Inténtalo de nuevo o escríbeme por correo.', 'is-error');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = label;
+          }
+        });
+      });
+
+      // ----- Botón fijo en móvil: aparece al bajar y se oculta cuando hay un formulario a la vista -----
+      const sticky = document.getElementById('stickyCta');
+      const inView = new Set();
+      const update = () => sticky.classList.toggle('is-visible', window.scrollY > 500 && inView.size === 0);
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => en.isIntersecting ? inView.add(en.target) : inView.delete(en.target));
+          update();
+        });
+        document.querySelectorAll('.form-card').forEach((f) => io.observe(f));
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+
+      // ----- Año del pie -----
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
