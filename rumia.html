@@ -215,6 +215,14 @@
     .section__head p { font-size: 1.2rem; color: var(--text-light); }
     .section--dark .section__head p { color: var(--rosa-pale); }
 
+    /* ---------- Otros servicios ---------- */
+.services { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 700px)  { .services { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .services { grid-template-columns: repeat(3, 1fr); } }
+.services li { background: #fff; border-radius: var(--radius); padding: 1.4rem 1.5rem; box-shadow: var(--shadow); border-top: 5px solid var(--rosa); }
+.services h3 { color: var(--plum); font-size: 1.45rem; margin-bottom: .5rem; }
+.services p { margin: 0; }
+
     /* ---------- ¿Te suena? ---------- */
     .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
     @media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
@@ -341,6 +349,46 @@
     .faq summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.7rem; color: var(--plum); font-weight: 600; }
     .faq details[open] summary::after { content: "–"; }
     .faq details p { padding-bottom: .5rem; }
+
+
+    <!-- ========== OTROS SERVICIOS ========== -->
+<section class="section section--rosa">
+  <div class="container">
+    <div class="section__head center">
+      <h2>En qué más puedo <em>acompañarte</em></h2>
+      <p>La rumia no es lo único con lo que trabajo. Si te reconoces más en alguna de estas situaciones, también podemos abordarla en sesión.</p>
+    </div>
+
+    <ul class="services">
+      <li>
+        <h3>Gestión de emociones</h3>
+        <p>Identificamos qué está pasando y desarrollamos repertorios de respuesta más flexibles y funcionales.</p>
+      </li>
+      <li>
+        <h3>Autocuidado y autoestima</h3>
+        <p>Exploramos quién quieres ser para que tus decisiones partan de ti, y no sólo de lo que se espera de ti.</p>
+      </li>
+      <li>
+        <h3>Reducción de la rumia y pensamientos intrusivos</h3>
+        <p>Cambiamos tu forma de relacionarte con esos pensamientos para que pesen menos y no decidan por ti.</p>
+      </li>
+      <li>
+        <h3>Afrontamiento de crisis personales</h3>
+        <p>Te acompañamos en cambios vitales y duelos para que puedas atravesarlos sin perder de vista quién quieres ser.</p>
+      </li>
+      <li>
+        <h3>Mindfulness para la vida cotidiana</h3>
+        <p>Practicamos una atención más consciente para apreciar lo positivo y decidir qué hacer con lo que no funciona.</p>
+      </li>
+      <li>
+        <h3>Uso problemático de tecnología</h3>
+        <p>Entendemos qué función cumplen las redes o los videojuegos en tu vida y buscamos una relación con ellos que te acerque a lo que te importa.</p>
+      </li>
+    </ul>
+
+    <div class="cta-row"><a class="btn btn--primary" href="#formulario">Cuéntame qué necesitas →</a></div>
+  </div>
+</section>
 
     /* ---------- CTA final ---------- */
     .final { max-width: 40rem; margin-inline: auto; }
@@ -664,6 +712,17 @@
               comparto tus datos con nadie.
             </p>
           </details>
+
+          <details>
+  <summary>¿Trabajas también otros temas, además de la rumia?</summary>
+  <p>
+    Sí. Además de la rumia y los pensamientos intrusivos, acompaño en gestión de emociones,
+    autocuidado y autoestima, crisis personales (cambios vitales, duelos), mindfulness para
+    la vida cotidiana y uso problemático de tecnología. Si no tienes claro si lo tuyo encaja,
+    escríbeme y lo valoramos juntas.
+  </p>
+</details>
+          
         </div>
       </div>
     </section>
