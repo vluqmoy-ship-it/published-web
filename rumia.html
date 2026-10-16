@@ -270,10 +270,44 @@
     .price .checks li::before { background: var(--rosa-pale); color: var(--plum); }
 
     /* ---------- Sobre mí ---------- */
-    .about { max-width: 46rem; margin-inline: auto; }
-    .about__photo { float: right; width: 190px; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); }
-    .tags { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
-    .tags li { background: var(--rosa-pale); color: var(--plum-deep); font-weight: 700; font-size: .92rem; padding: .35rem .9rem; border-radius: 999px; }
+.about {
+  display: grid; grid-template-columns: 1fr; gap: 2.2rem; align-items: start;
+}
+.about__media {
+  position: relative; width: min(100%, 280px); margin-inline: auto;
+}
+.about__media::before {            /* marco rosa decorativo detrás de la foto */
+  content: ""; position: absolute; inset: 14px -14px -14px 14px;
+  background: var(--rosa-pale); border-radius: var(--radius); z-index: 0;
+}
+.about__photo {
+  position: relative; z-index: 1; display: block;
+  width: 100%; height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: center top;
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.about__body h2 { margin-bottom: 1.2rem; }
+.about__lead {
+  font-family: var(--font); font-size: 1.6rem; line-height: 1.3;
+  font-weight: 600; color: var(--plum-deep); margin-bottom: 1.2rem;
+}
+.about__personal {
+  background: var(--rosa-blush);
+  border-left: 4px solid var(--rosa);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.3rem 1.5rem 0.4rem; margin: 1.6rem 0;
+}
+.about__personal h3 { font-size: 1.35rem; color: var(--plum); margin-bottom: .7rem; }
+.about .training { margin-top: 0; }
+.about .cta-row { text-align: left; margin-top: 1.8rem; }
+
+@media (min-width: 900px) {
+  .about { grid-template-columns: 340px 1fr; gap: 4.5rem; }
+  .about__media { width: 100%; margin: 0; position: sticky; top: 100px; }
+}
+@media (max-width: 899px) {
+  .about .cta-row { text-align: center; }
+}
 
     /* ---------- Formación ---------- */
 .training {
@@ -484,31 +518,7 @@
       </div>
     </section>
 
-    <!-- ========== CÓMO EMPEZAR ========== -->
-    <section class="section section--dark">
-      <div class="container">
-        <div class="section__head center">
-          <h2>Empezar es <em>más sencillo</em> de lo que parece</h2>
-        </div>
-
-        <ol class="steps">
-          <li>
-            <h3>Cuéntame qué necesitas</h3>
-            <p>Rellena el formulario con lo que quieras contarme. Con dos líneas es suficiente.</p>
-          </li>
-          <li>
-            <h3>Te respondo en menos de 48 h</h3>
-            <p>Resuelvo tus dudas y buscamos juntas un hueco para la primera sesión.</p>
-          </li>
-          <li>
-            <h3>Primera sesión online</h3>
-            <p>Exploramos qué te pasa, empezamos a trabajar y valoramos juntas qué ritmo tiene sentido para ti.</p>
-          </li>
-        </ol>
-
-        <div class="cta-row"><a class="btn btn--accent" href="#contacto">Dar el primer paso →</a></div>
-      </div>
-    </section>
+  
 
     <!-- ========== PRECIO ========== -->
     <section class="section section--rosa">
@@ -532,39 +542,73 @@
       </div>
     </section>
 
-    <!-- ========== SOBRE MÍ ========== -->
-    <section class="section">
-      <div class="container about">
-        <h2>Hola, soy <em>Vanessa</em></h2>
+     <!-- ========== SOBRE MÍ ========== -->
+<section class="section">
+  <div class="container about">
 
-        <!-- Cuando tengas foto, descomenta y pon la ruta:
-        <img class="about__photo" src="assets/vanessa.jpg" alt="Vanessa Luque, terapeuta contextual" width="190" height="238" loading="lazy">
-        -->
+    <div class="about__media">
+      <img class="about__photo" src="vanessaperro.jpg"
+           alt="Vanessa Luque, terapeuta contextual"
+           width="400" height="500" loading="lazy">
+    </div>
 
+    <div class="about__body">
+      <h2>Hola, soy <em>Vanessa</em></h2>
+
+      <p class="about__lead">
+        Soy terapeuta contextual y educadora social especializada en educación emocional.
+      </p>
+
+      <p>
+        Durante años he trabajado y hecho voluntariados con personas en situaciones muy
+        distintas: salud mental, adicciones, personas mayores, infancia… Eso me enseñó que
+        cada persona es diferente y que no hay una única forma de acompañar ni de vivir la vida.
+      </p>
+      <p>
+        Por eso no trabajo con recetas: me interesa entender qué hay detrás de lo que sientes
+        y qué te ha llevado al lugar donde estás hoy, para poder construir contigo algo que
+        tenga sentido para tu vida y el tipo de persona que quieres ser.
+      </p>
+
+      <div class="about__personal">
+        <h3>Y fuera de la consulta…</h3>
         <p>
-          Soy terapeuta contextual y educadora social especializada en educación emocional. Durante años he trabajado
-          y hecho voluntariados con personas en situaciones muy distintas: salud
-          mental, adicciones, personas mayores, infancia… Eso me enseñó que cada
-          persona es diferente y que no hay una única forma de acompañar.
+          Sé que dar el primer paso puede costar, y más con alguien a quien no conoces de nada,
+          así que para que sepas un poquito más sobre mí: soy una persona con mucha curiosidad
+          y muchas aficiones. Me gusta leer, ver series, pasear por la naturaleza, los animales
+          (tengo una gatita y una perrita), los juegos de mesa y los videojuegos, mirar las
+          estrellas y planetas con mi telescopio y aprender cosas nuevas, especialmente para
+          poder comprender y ayudar a otras personas.
         </p>
         <p>
-          Por eso no trabajo con recetas: me interesa entender qué hay detrás de
-          lo que sientes y construir contigo algo que tenga sentido para tu vida.
+          Y sobre el tipo de persona que intento ser, mi norte lo marcan la amabilidad y la
+          humildad (aunque por supuestísimo no soy perfecta y a veces meto la pata y voy en la
+          dirección contraria, hasta que mi brújula me recuerda cuál era el norte). Pienso que
+          la vida es eso: decidir hacia dónde quieres moverte y qué tipo de persona te gustaría
+          ser en ese viaje, y cuando la vida te pone obstáculos o te pierdes, usar esa brújula
+          para volver a tu camino.
         </p>
-
-        <div class="training">
-  <h3>Tengo formación en</h3>
-  <ul class="training__list">
-    <li>Terapias contextuales y de tercera generación</li>
-    <li>Terapia de Aceptación y Compromiso</li>
-    <li>Terapia Analítico Funcional</li>
-    <li>Educación social</li>
-    <li>Educación emocional</li>
-    <li>Análisis de conducta</li>
-  </ul>
-</div>
       </div>
-    </section>
+
+      <div class="training">
+        <h3>Tengo formación en</h3>
+        <ul class="training__list">
+          <li>Terapias contextuales y de tercera generación</li>
+          <li>Terapia de Aceptación y Compromiso</li>
+          <li>Terapia Analítico Funcional</li>
+          <li>Educación social</li>
+          <li>Educación emocional</li>
+          <li>Análisis de conducta</li>
+        </ul>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn--primary" href="#contacto">Quiero hablar contigo →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- ========== FAQ ========== -->
     <section class="section section--blush">
@@ -674,7 +718,7 @@
         </span>
       </div>
       <p class="footer__legal">
-        SerElpis ofrece acompañamiento y entrenamiento en habilidades emocionales.
+        SerElpis ofrece terapia online, acompañamiento y entrenamiento en habilidades emocionales.
         No es un servicio de urgencias ni sustituye a la atención sanitaria.
         Si estás en una situación de crisis, llama al 112. Si tienes pensamientos
         de hacerte daño, puedes llamar al 024.
