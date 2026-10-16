@@ -714,7 +714,7 @@
   <script>
     const CONFIG = {
       // 1) Tu endpoint de Formspree (https://formspree.io/f/xxxxxxx)
-      FORM_ENDPOINT: 'https://formspree.io/f/TU_ID',
+      FORM_ENDPOINT: 'https://formspree.io/f/xkoyrknw',
       // 2) Tu conversión de Google Ads, con el formato 'AW-XXXXXXXXX/YYYYYYYYYYYY'
       //    (déjalo vacío hasta que la tengas)
       ADS_CONVERSION: ''
@@ -742,10 +742,14 @@
           btn.disabled = true;
           btn.textContent = 'Enviando…';
 
-          try {
+                    try {
+            const formData = new FormData(form);
+            formData.set('origen', window.location.href);
+            formData.set('pagina_titulo', document.title);
+
             const res = await fetch(CONFIG.FORM_ENDPOINT, {
               method: 'POST',
-              body: new FormData(form),
+              body: formData,
               headers: { Accept: 'application/json' }
             });
             if (!res.ok) throw new Error('Error de envío');
