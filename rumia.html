@@ -216,11 +216,21 @@
     .section--dark .section__head p { color: var(--rosa-pale); }
 
     /* ---------- Otros servicios ---------- */
-.services { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: 1fr; }
-@media (min-width: 700px)  { .services { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1000px) { .services { grid-template-columns: repeat(3, 1fr); } }
-.services li { background: #fff; border-radius: var(--radius); padding: 1.4rem 1.5rem; box-shadow: var(--shadow); border-top: 5px solid var(--rosa); text-align: center; display: flex; flex-direction: column; justify-content: center; }.services p { margin: 0; }
+.services {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+}
+.services li {
+  flex: 1 1 100%;
+  background: #fff; border-radius: var(--radius); padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow); border-top: 5px solid var(--rosa);
+  text-align: center; display: flex; flex-direction: column; justify-content: center;
+}
+.services p { margin: 0; }
 
+@media (min-width: 700px)  { .services li { flex-basis: calc((100% - 1rem) / 2); max-width: calc((100% - 1rem) / 2); } }
+@media (min-width: 1000px) { .services li { flex-basis: calc((100% - 2rem) / 3); max-width: calc((100% - 2rem) / 3); } }
+    
     /* ---------- ¿Te suena? ---------- */
     .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
     @media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
